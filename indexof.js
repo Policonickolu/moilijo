@@ -38,23 +38,23 @@ function indexOfRecursive(val, arr, prevMin){
 
     if(val > arr[i]){
 
-      // Notr valeur se trouve dans la première partie du tableau entre min et i.
+      // Notre valeur se trouve dans la première partie du tableau entre min et i.
 
-      // On augmente notre minimum à i.
+      // On augmente notre minimum à i + 1.
       min = i + 1;
 
     }else if(val < arr[i]){
 
       // Notre valeur se trouve dans la seconde partie du tableau entre i et max.
 
-      // On réduit notre maximum à i.
+      // On réduit notre maximum à i - 1.
       max = i - 1;
 
     }else{
 
       // val == arr[i]
       // Notre valeur se trouve à i, on l'a trouvée, on retourne donc i comme index.
-      // On ajoute prevMin à i pour avoir l'indice de notre valeur dans le tableau initial
+      // On ajoute prevMin à i pour avoir l'indice de notre valeur dans le tableau initial et complet.
       return i + prevMin;
     }
 
